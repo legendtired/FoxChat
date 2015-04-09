@@ -86,9 +86,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "FoxChat.framework/**/*.{h,m}"
-  s.public_header_files = "FoxChat.framework/Headers/FoxChat.h"
-  s.preserve_paths = 'FoxChat.framework'
+  #s.source_files  = "FoxChat.framework/**/*.{h,m}"
+  #s.public_header_files = "FoxChat.framework/Headers/FoxChat.h"
+  #s.preserve_paths = 'FoxChat.framework'
+  s.vendored_frameworks = 'FoxChat.framework'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -106,6 +107,6 @@ Pod::Spec.new do |s|
   s.libraries = "z", "sqlite3.0"
   s.requires_arc = true
 
-  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/FoxChat"' }
-  s.library = 'FoxChat'
+  #s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/FoxChat"' }
+  #s.library = 'FoxChat'
 end
