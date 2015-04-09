@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.authors      = { "legend" => "legendsky@hotmail.com" }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/legendtired/FoxChat.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/legendtired/FoxChat.git", :tag => "0.0.2" }
   s.vendored_frameworks = 'FoxChat.framework'
   s.frameworks = "AVFoundation", "MapKit", "AudioToolbox"
   s.libraries = "z", "sqlite3.0"
