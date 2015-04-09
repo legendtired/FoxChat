@@ -36,7 +36,12 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = {
+    :type => 'Copyright',
+    :text => <<-LICENSE
+      Copyright 2015 FoxChat.im. All rights reserved.
+      LICENSE
+  }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -81,8 +86,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "FoxChat.framework"
+  s.source_files  = "FoxChat.framework/**/*.{h,m}"
   s.public_header_files = "FoxChat.framework/Headers/FoxChat.h"
+  s.preserve_paths = 'FoxChat.framework'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -99,4 +105,7 @@ Pod::Spec.new do |s|
   s.frameworks = "AVFoundation", "MapKit", "AudioToolbox"
   s.libraries = "z", "sqlite3.0"
   s.requires_arc = true
+
+  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/FoxChat"' }
+  s.library = 'FoxChat'
 end
