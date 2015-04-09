@@ -1,0 +1,6 @@
+framework module FoxChat {
+  umbrella header "FoxChat.h"
+
+  export *
+  module * { export * }
+}
