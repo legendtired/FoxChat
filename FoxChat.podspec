@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "FoxChat"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "FoxChat SDK 无UI版本"
   s.homepage     = "http://foxchat.im"
   s.license      = {
